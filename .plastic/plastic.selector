@@ -1,0 +1,4 @@
+repository "Minecraft2D@ssl://crispyxyz@sh01-plasticscm.unity.cn:8787"
+  path "/"
+    smartbranch "/main/3146762331" 
+     
