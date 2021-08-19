@@ -25,7 +25,7 @@ public class SteveController : MonoBehaviour
         else horizontalMove /= velocityReductionRate;
         body.velocity = new Vector2(horizontalMove*speed,body.velocity.y);
 
-        if(Input.GetKeyDown(KeyCode.Space)&&body.velocity.y==0)  body.velocity = new Vector2(body.velocity.x, jumpforce);
+        if((Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButton(2))&&body.velocity.y==0)  body.velocity = new Vector2(body.velocity.x, jumpforce);
         if(transform.position.y<-20)  transform.position = new Vector3(1,4,transform.position.z);
     }
 }
