@@ -7,6 +7,10 @@ public class ObjectCreator
 {
     private static Dictionary<Vector3,GameObject> blocks = new Dictionary<Vector3,GameObject>();
 
+    public static void CreateObject(Vector3 position){
+        CreateObject(position, Guid.NewGuid().ToString());
+    }
+
     public static void CreateObject(Vector3 position, string name) {
         if(blocks.ContainsKey(position)) return;
         GameObject obj = new GameObject();

@@ -11,6 +11,6 @@ public class OutlineController : MonoBehaviour
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3((int)Math.Round(pos.x),(int)Math.Round(pos.y),0);
         if(Input.GetMouseButton(0)) ObjectCreator.RemoveObject(transform.position);
-        if(Input.GetMouseButton(1)) ObjectCreator.CreateObject(transform.position, Guid.NewGuid().ToString());
+        if(Input.GetMouseButton(1)) ObjectCreator.CreateObject(transform.position);
     }
 }

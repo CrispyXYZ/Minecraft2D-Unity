@@ -5,7 +5,7 @@ public class SteveController : MonoBehaviour
 {
     public Rigidbody2D body;
     public Collider2D coll;
-    public float jumpforce, speed, velocityReductionRate;
+    public float jumpforce, speed, velocityReductionRate, startPlatformSize;
     private float horizontalMove;
 
     // Start is called before the first frame update
@@ -13,6 +13,10 @@ public class SteveController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+        for(int x=(int)Math.Round(transform.position.x), p = 0;p < startPlatformSize;p++){
+            x = x + (int)Math.Pow(-1,p) * p;
+            ObjectCreator.CreateObject(new Vector3(x, transform.position.y-1, 0));
+        }
     }
 
     // Update is called once per frame
