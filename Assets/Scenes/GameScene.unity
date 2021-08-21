@@ -257,7 +257,7 @@ MonoBehaviour:
   coll: {fileID: 0}
   jumpforce: 5
   speed: 3
-  velocityReductionRate: 1.1
+  velocityReductionRate: 1.12
   startPlatformSize: 5
 --- !u!61 &665818614
 BoxCollider2D:
