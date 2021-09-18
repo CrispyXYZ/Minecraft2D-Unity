@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 665818612}
-  speed: 0.05
+  speed: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 4.5, z: -10}
+  m_LocalPosition: {x: 0, y: 32, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -255,10 +255,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 0}
   coll: {fileID: 0}
+  worldSize: 512
   jumpforce: 5
   speed: 3
   velocityReductionRate: 1.12
-  startPlatformSize: 5
+  perlinZ: 0.1
+  perlinXRate: 0.01
 --- !u!61 &665818614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -366,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665818612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 127, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
