@@ -5,7 +5,6 @@ public class SteveController : MonoBehaviour
 {
     public Rigidbody2D body;
     public Collider2D coll;
-    public int worldSize;
     public float jumpforce, speed, velocityReductionRate, perlinZ, perlinXRate;
     private float horizontalMove;
 
@@ -13,6 +12,7 @@ public class SteveController : MonoBehaviour
     void Start()
     {
         int seed = InputListener.seed;
+        int worldSize = WSInputListener.size;
         body = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         for(int x=-worldSize;x<worldSize;x++){
